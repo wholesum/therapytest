@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<aiml version="2.0">
+	<!-- insert your AIML categories here -->
+<category><pattern>I DREAM ABOUT *</pattern>
+
+<template>
+         <think><set name = "dream"><set name="dream"><formal><star/></formal></set>
+         <think><set name="it"><set name="topic"><star/></set></set></think></set></think>
+         
+         <condition name = "dream" value = "snake">
+            I am looking up <star/>
+         </condition>
+         
+         <condition name = "dream" value = "gun">
+            I am looking up <star/>
+         </condition>
+         
+         <condition name = "dream" value = "dog">
+            I don't know anything about <star/>, did anything else interesting happen?
+         </condition>
+</template>
+
+
+</category>
+
+<category><pattern>DREAM PROFILE</pattern>
+<template>
+<condition name="dream"><li value="what"/><li>dream: <get name="dream"/>.</li></condition>
+</template>
+</category>
+</aiml>
